@@ -1,11 +1,11 @@
-import Vue from "vue";
-import Vuex from "vuex";
-import user from "./modules/user";
-import cart from "./modules/cart";
-import category from "./modules/category";
-import createPersistedstate from "vuex-persistedstate";
+import Vue from 'vue'
+import Vuex from 'vuex'
+import user from './modules/user'
+import cart from './modules/cart'
+import category from './modules/category'
+import createPersistedstate from 'vuex-persistedstate'
 
-Vue.use(Vuex);
+Vue.use(Vuex)
 
 // 创建vuex仓库并导出
 export default new Vuex.Store({
@@ -25,12 +25,12 @@ export default new Vuex.Store({
     // 分模块
     user,
     cart,
-    category,
+    category
   },
   plugins: [
     createPersistedstate({
-      key: "erabbit-client-pc-store",
-      paths: ["user", "cart"],
-    }),
-  ],
-});
+      key: 'erabbit-client-pc-store',
+      paths: ['user', 'cart']
+    })
+  ]
+})
