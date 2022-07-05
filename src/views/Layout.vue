@@ -26,6 +26,10 @@ export default {
     appTopnavVue,
     appHeaderVue,
     appFooterVue
+  },
+  // 获取下分类数据
+  created () {
+    this.$store.dispatch('category/getList')
   }
 }
 </script>
