@@ -1,6 +1,6 @@
 <template>
  <div>
-    <nav>顶部导航</nav>
+    <nav><appTopnavVue /></nav>
  <header>头部</header>
  <main>
     <!-- 二级路由 -->
@@ -11,8 +11,12 @@
 </template>
 
 <script>
+import appTopnavVue from '@/components/app-topnav.vue'
 export default {
-  name: 'xtx-layout'
+  name: 'xtx-layout',
+  components: {
+    appTopnavVue
+  }
 }
 </script>
 
