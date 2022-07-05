@@ -5,7 +5,7 @@ import store from './store'
 import 'normalize.css'
 import '@/assets/styles/common.less'
 Vue.config.productionTip = false
-
+document.title = '小兔鲜商城'
 new Vue({
   router,
   store,
