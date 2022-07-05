@@ -12,7 +12,6 @@
 </template>
 
 <script>
-import { ref } from 'vue'
 import AppHeaderNav from './app-header-nav'
 import { useWindowScroll } from '@vueuse/core'
 export default {
