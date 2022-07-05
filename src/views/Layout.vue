@@ -1,7 +1,11 @@
 <template>
  <div>
-    <nav><appTopnavVue /></nav>
- <header>头部</header>
+    <nav>
+      <appTopnavVue />
+    </nav>
+ <header>
+   <appHeaderVue />
+ </header>
  <main>
     <!-- 二级路由 -->
     <router-view />
@@ -12,10 +16,12 @@
 
 <script>
 import appTopnavVue from '@/components/app-topnav.vue'
+import appHeaderVue from '@/components/app-header.vue'
 export default {
   name: 'xtx-layout',
   components: {
-    appTopnavVue
+    appTopnavVue,
+    appHeaderVue
   }
 }
 </script>
