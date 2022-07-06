@@ -14,6 +14,8 @@
     <homeHotVue />
     <!-- 热门品牌 -->
     <homeBrandVue />
+    <!-- 商品区域 -->
+    <homeProductVue />
   </div>
 </template>
 
@@ -23,6 +25,7 @@ import homeBannerVue from './components/home-banner.vue'
 import homeNewVue from './components/home-new.vue'
 import homeHotVue from './components/home-hot.vue'
 import homeBrandVue from './components/home-brand.vue'
+import homeProductVue from './components/home-product.vue'
 export default {
   name: 'xtx-home-papg',
   components: {
@@ -30,7 +33,8 @@ export default {
     homeBannerVue,
     homeNewVue,
     homeHotVue,
-    homeBrandVue
+    homeBrandVue,
+    homeProductVue
   }
 }
 </script>
