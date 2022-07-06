@@ -67,9 +67,11 @@ export default {
       this.subList = data.result.children
     })
     watch(() => this.$route.params.id, (newV) => {
-      newV && findTopCategory(this.$route.params.id).then(data => {
-        this.subList = data.result.children
-      })
+      if (newV && `/category/${newV}` === this.$route.path) {
+        findTopCategory(this.$route.params.id).then(data => {
+          this.subList = data.result.children
+        })
+      }
     }, { immediate: true })
   }
 

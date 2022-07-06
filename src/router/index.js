@@ -33,6 +33,13 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
-})
 
+})
+router.beforeEach((to, from, next) => {
+  document.body.scrollTop = 0
+  document.documentElement.scrollTop = 0
+  document.body.scrollLeft = 0
+  document.documentElement.scrollLeft = 0
+  next()
+})
 export default router
