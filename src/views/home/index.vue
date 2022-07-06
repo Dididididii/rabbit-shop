@@ -16,10 +16,13 @@
     <homeBrandVue />
     <!-- 商品区域 -->
     <homeProductVue />
+     <!-- 最新专题 -->
+    <homeSpecialVue />
   </div>
 </template>
 
 <script>
+import homeSpecialVue from './components/home-special.vue'
 import homeCategoryVue from './components/home-category.vue'
 import homeBannerVue from './components/home-banner.vue'
 import homeNewVue from './components/home-new.vue'
@@ -34,7 +37,8 @@ export default {
     homeNewVue,
     homeHotVue,
     homeBrandVue,
-    homeProductVue
+    homeProductVue,
+    homeSpecialVue
   }
 }
 </script>
