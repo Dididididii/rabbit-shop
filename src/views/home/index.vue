@@ -10,6 +10,8 @@
     </div>
     <!-- 新鲜好物 -->
     <homeNewVue />
+    <!-- 人气推荐 -->
+    <homeHotVue />
   </div>
 </template>
 
@@ -17,12 +19,14 @@
 import homeCategoryVue from './components/home-category.vue'
 import homeBannerVue from './components/home-banner.vue'
 import homeNewVue from './components/home-new.vue'
+import homeHotVue from './components/home-hot.vue'
 export default {
   name: 'xtx-home-papg',
   components: {
     homeCategoryVue,
     homeBannerVue,
-    homeNewVue
+    homeNewVue,
+    homeHotVue
   }
 }
 </script>

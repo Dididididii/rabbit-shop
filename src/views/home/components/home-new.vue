@@ -30,7 +30,6 @@ export default {
   created () {
     findNew().then(data => {
       this.goods = data.result
-      console.log(this.goods)
     })
   }
 
