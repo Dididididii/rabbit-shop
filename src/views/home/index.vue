@@ -8,17 +8,21 @@
         <homeBannerVue />
       </div>
     </div>
+    <!-- 新鲜好物 -->
+    <homeNewVue />
   </div>
 </template>
 
 <script>
 import homeCategoryVue from './components/home-category.vue'
 import homeBannerVue from './components/home-banner.vue'
+import homeNewVue from './components/home-new.vue'
 export default {
   name: 'xtx-home-papg',
   components: {
     homeCategoryVue,
-    homeBannerVue
+    homeBannerVue,
+    homeNewVue
   }
 }
 </script>

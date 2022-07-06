@@ -14,12 +14,13 @@
 <script>
 import AppHeaderNav from './app-header-nav'
 import { useWindowScroll } from '@vueuse/core'
+const { y } = useWindowScroll()
 export default {
   name: 'AppHeaderSticky',
   components: { AppHeaderNav },
   data () {
     return {
-      y: useWindowScroll()
+      y: y
     }
   }
 

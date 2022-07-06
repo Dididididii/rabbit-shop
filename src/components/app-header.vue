@@ -3,6 +3,7 @@
     <div class="container">
       <h1 class="logo"><RouterLink to="/">小兔鲜</RouterLink></h1>
       <appHeaderNavVue />
+      <appHeaderStickyVue/>
 
       <div class="search">
         <i class="iconfont icon-search"></i>
@@ -19,10 +20,11 @@
 
 <script>
 import appHeaderNavVue from './app-header-nav.vue'
+import appHeaderStickyVue from './app-header-sticky.vue'
 export default {
   name: 'AppHeader',
   components: {
-    appHeaderNavVue
+    appHeaderNavVue, appHeaderStickyVue
   }
 }
 </script>
