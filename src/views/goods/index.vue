@@ -89,7 +89,6 @@ export default {
         this.useGoods()
       }
     }, { immediate: true })
-    console.log(this.$refs)
   }
 }
 </script>
