@@ -4,7 +4,7 @@ import TopCategory from '@/views/category/index.vue'
 import SubCategory from '@/views/category/sub'
 const Layout = () => import('@/views/Layout')
 const Home = () => import('@/views/home')
-
+const Goods = () => import('@/views/goods')
 Vue.use(VueRouter)
 
 const routes = [
@@ -23,6 +23,10 @@ const routes = [
       {
         path: '/category/sub/:id',
         component: SubCategory
+      },
+      {
+        path: '/product/:id',
+        component: Goods
       }
     ]
 

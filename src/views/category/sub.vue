@@ -87,7 +87,7 @@ export default {
       const clientHeight = document.documentElement.clientHeight
       const scrollHeight = document.documentElement.scrollHeight - 500
       if (scorllTop + clientHeight >= scrollHeight) {
-        if (!this.finished) {
+        if (!this.loading && !this.finished) {
           this.getData()
         }
       }
@@ -119,7 +119,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style scoped lang="less">
 .goods-list {
   background: #fff;
   padding: 0 25px;

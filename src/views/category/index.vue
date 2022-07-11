@@ -3,7 +3,7 @@
     <div class="container">
 
       <!-- 轮播图 -->
-      <xtxCarouselVue :sliders="sliders" style="height:500px" />
+      <xtxCarouselVue auto-play :sliders="sliders" class="carousel"  />
       <!-- 所有二级分类 -->
       <div class="sub-list">
         <h3>全部分类</h3>
@@ -78,6 +78,10 @@ export default {
 }
 </script>
 <style scoped lang="less">
+.carousel{
+height:500px
+
+}
 .top-category {
   h3 {
     font-size: 28px;

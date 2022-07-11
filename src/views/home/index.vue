@@ -43,7 +43,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style scoped lang="less">
 .xtx-carousel {
   .carousel-btn.prev {
     left: 270px !important;

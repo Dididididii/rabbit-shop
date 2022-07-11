@@ -4,13 +4,13 @@
     <div class="item">
       <div class="head">品牌：</div>
       <div class="body">
-        <a :class="{active:filterData.selectedBrand===brand.id}" href="javasript:;" v-for="brand in filterData.brands" :key="brand.id">{{brand.name}}</a>
+        <a @click="changeBrand(brand.id)" :class="{active:filterData.selectedBrand===brand.id}" href="#" v-for="brand in filterData.brands" :key="brand.id" >{{brand.name}}</a>
       </div>
     </div>
     <div class="item" v-for="p in filterData.saleProperties" :key="p.id">
       <div class="head">{{p.name}}：</div>
       <div class="body">
-        <a :class="{active:p.selectedProp===attr.id}" href="javasript:;" v-for="attr in p.properties" :key="attr.id">{{attr.name}}</a>
+        <a :class="{active:p.selectedProp===attr.id}" href="#" v-for="attr in p.properties" :key="attr.id" @click="changeAttr(p,attr.id)">{{attr.name}}</a>
       </div>
     </div>
   </div>
@@ -63,13 +63,16 @@ export default {
         }
       })
       if (attrs.length) filterParams.attrs = attrs
+      // console.log(filterParams)
       return filterParams
     },
     // 选择品牌
     changeBrand (brandId) {
       if (this.filterData.selectedBrand === brandId) return
       this.filterData.selectedBrand = brandId
+
       this.$emit('filter-change', this.getFilterParams())
+      return false
     },
     // 选中属性
     changeAttr (p, attrId) {
