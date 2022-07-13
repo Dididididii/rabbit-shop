@@ -5,6 +5,7 @@ import SubCategory from '@/views/category/sub'
 const Layout = () => import('@/views/Layout')
 const Home = () => import('@/views/home')
 const Goods = () => import('@/views/goods')
+const Login = () => import('@/views/login')
 Vue.use(VueRouter)
 
 const routes = [
@@ -30,6 +31,10 @@ const routes = [
       }
     ]
 
+  },
+  {
+    path: '/login',
+    component: Login
   }
 ]
 

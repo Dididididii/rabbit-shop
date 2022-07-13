@@ -6,11 +6,10 @@
   </div>
 </template>
 <script>
-import { watch } from 'vue'
 export default {
   name: 'XtxCheckbox',
   props: {
-    vaule: {
+    check: {
       type: Boolean,
       default: false
     }
@@ -26,10 +25,14 @@ export default {
       this.$emit('change', this.checked)
     }
   },
-  created () {
-    watch(() => this.vaule, () => {
-      this.checked = this.vaule
-    }, { immediate: true })
+
+  watch: {
+    check: {
+      handler: function (newV) {
+        this.checked = newV
+      },
+      immediate: true
+    }
   }
 
 }
